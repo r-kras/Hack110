@@ -1,12 +1,13 @@
-
 from flask import Flask, render_template, request
-from helpers import todo
+from helpers import quote
+#from iteration1.movie_guesser import full_session
 
 app: Flask = Flask(__name__)
 
-todo_list: list[todo] = []
+current_quote: quote
 todo_count: int = 0
  
+
 @app.route("/")
 def index():
     return render_template('index.html')
@@ -23,7 +24,7 @@ def create_guess_game():
         new_todo: todo = todo(title, usr_guess)
         todo_list.append(new_todo)
  
-        return render_template("success.html", title=title, usr_guess=usr_guess)
+#        return render_template("success.html", title=title, usr_guess=usr_guess)
     return render_template("guess_game.html")
 
 

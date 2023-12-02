@@ -1,30 +1,69 @@
-<!--Main page-->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!--Styling-->
-        <link rel='stylesheet' href='/static/bootstrap.min.css'>
-        <link rel='stylesheet' href='/static/styles.css'>
-        <meta charset="UTF-8">
-        <title>Intro to Web Dev!</title>
-    </head>
-    <body>
-        <!-- navigation bar -->
-        <nav class="navbar navbar-expand">
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/"><img class="logo" src="/static/movie_reel.png" alt="logo"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/guess_game">game</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <p>Test</p>
-    </body>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+ 
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>Guess The Quote</h1>
+    <p>
+        We have selected a random quote from
+        700+ possibilities! See if you can guess it.
+    </p>
+    <p></p>
+ 
+    <div class="form">
+        <label for="guessField">
+            Enter a guess: 
+        </label>
+         
+        <input type="text" id="guessField"
+            class="guessField">
+         
+        <input type="submit" value="Submit guess"
+            class="guessSubmit" id="submitguess">
+    </div>
+ 
+    <script type="text/javascript">
+ 
+        // Generate a Random Number
+        let y = Math.floor(Math.random() * 10 + 1);
+ 
+        // Counting the number of guesses
+        // made for correct Guess
+        let guess = 1;
+ 
+        document.getElementById("submitguess").onclick = function () {
+ 
+            // Number guessed by user    
+            let x = document.getElementById("guessField").value;
+ 
+            if (x == y) {
+                alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+                    + guess + " GUESSES ");
+            }
+ 
+            /* If guessed number is greater than actual number*/
+            else if (x > y) {
+                guess++;
+                alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+            }
+            else {
+                guess++;
+                alert("OOPS SORRY!! TRY A GREATER NUMBER")
+            }
+        }
+    </script>
+</body>
 </html>

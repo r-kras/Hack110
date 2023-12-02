@@ -1,14 +1,12 @@
 # Task: Obtaining the Data
-class todo:
+class quote:
     id: int
-    title: str
-    description: str
-    color: str
-    checked: bool
+    movie: str
+    lines: str
+    year: str
  
-    def __init__(self, id: int, title: str, description: str, color: str):
+    def __init__(self, id: int, movie: str, lines: str, year: str):
         self.id = id
-        self.title = title
-        self.description = description
-        self.color = color
-        self.checked = False # Every new item begins as unchecked
+        self.movie = movie
+        self.lines = lines
+        self.year = year
