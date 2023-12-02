@@ -1,0 +1,5 @@
+- pick font
+- pick color scheme
+- Create nav bar
+   o Home page
+   o Game

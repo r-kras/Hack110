@@ -1,4 +1,4 @@
-<!--Main page-->
+<!--Input a todo task-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +6,7 @@
         <link rel='stylesheet' href='/static/bootstrap.min.css'>
         <link rel='stylesheet' href='/static/styles.css'>
         <meta charset="UTF-8">
-        <title>Intro to Web Dev!</title>
+        <title>Guessing Game!</title>
     </head>
     <body>
         <!-- navigation bar -->
@@ -25,6 +25,20 @@
                 </ul>
             </div>
         </nav>
-        <p>Test</p>
+        <!--Main todo functions-->
+        <form method="post">
+            <label for="title">Your Quote is...</label>
+            <br />
+            <input type="text" id="title" name="title">
+            <br />
+            <br />
+            <label for="usr_guess">Enter Guess:</label>
+            <br />
+            <input type="text" id="usr_guess" name="Enter Guess">
+            <br />
+            <br />
+            <!--Input Button-->
+            <input type="submit" value="Create">
+        </form>
     </body>
 </html>
